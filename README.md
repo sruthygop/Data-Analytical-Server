@@ -121,4 +121,21 @@ Provides a Streamlit-powered interface to monitor, preview, and re-run jobs with
 
 # Installation
 
-Set up the environment by installing the dependencies from requirements.txt
+Set up the environment by installing the dependencies from [Requirement.txt](Requirement.txt)
+
+# Output
+
+Screenshot of the Output--> [DAS-UI-pic](DAS-UI-pic.png)
+
+
+# Conclusion
+
+* This project provides a user-friendly analytical platform for executing scripts stored in HDFS with:
+
+* Real-time monitoring via Streamlit
+
+* Execution tracking in MongoDB
+
+* Detailed logging for transparency
+
+* A practical foundation for Data Analytical Servers (DAS) with Spark integration.
