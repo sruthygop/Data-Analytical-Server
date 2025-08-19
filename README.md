@@ -67,4 +67,58 @@ This project aims to simplify the workflow of executing Python scripts in a dist
 
 * Collection → sample
 
-These values can be centralized in a [config.py](config.py) file for easier management.
+These values can be centralized in a config.py file for easier management.
+
+# Streamlit Dashboard
+
+* The main entry point is [app.py](app.py), which provides:
+
+* File browser for available scripts in HDFS
+
+* Script preview before execution
+
+* Multi-select to run multiple scripts
+
+* Retry configuration for failed jobs
+
+* Execution summary with time taken & results
+
+# Logs
+
+Logs are handled with Python’s logging system:
+
+Configurable log level (INFO, DEBUG, etc.)
+
+File output: [loggsetup.py](loggsetup.py)
+
+Format: timestamp - log level - message
+
+# Execution Manager
+
+Main orchestration logic resides in: [execution-manager.py](execution-manager.py)
+
+This module manages the execution flow of Python scripts stored in HDFS and records run information in MongoDB.
+
+🔹 Features:
+
+HDFS Access – Fetches and lists available .py scripts from HDFS.
+
+MongoDB Logging – Stores job metadata and updates run states (queued, running, completed, failed).
+
+Streamlit Dashboard –
+
+Preview script contents
+
+Choose scripts to run
+
+Configure number of retries
+
+Spark Integration – Submits selected jobs to Spark using spark-submit for distributed execution.
+
+Failure & Retry Logic – Failed jobs are retried automatically based on user-defined limits.
+
+Provides a Streamlit-powered interface to monitor, preview, and re-run jobs with ease.
+
+# Installation
+
+Set up the environment by installing the dependencies from requirements.txt
